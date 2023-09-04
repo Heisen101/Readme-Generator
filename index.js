@@ -54,3 +54,51 @@ function writeR(content) {
     }
   });
 }
+
+const input = [
+  {
+    type: "input",
+    name: "",
+    message: "",
+  },
+  {
+    type: "input",
+    name: "",
+    message: "",
+  },
+  {
+    type: "input",
+    name: "",
+    message: "",
+  },
+  {
+    type: "input",
+    name: "",
+    message: "",
+  },
+  {
+    type: "input",
+    name: "",
+    message: "",
+  },
+  {
+    type: "input",
+    name: "",
+    message: "",
+  },
+  {
+    type: "input",
+    name: "",
+    message: "",
+  },
+  {
+    type: "input",
+    name: "",
+    message: "",
+  },
+  {
+    type: "input",
+    name: "",
+    message: "",
+  },
+];
