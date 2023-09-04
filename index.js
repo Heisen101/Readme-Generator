@@ -10,7 +10,8 @@ function generateReadme(
   license,
   contributing,
   tests,
-  email
+  email,
+  githubUsername
 ) {
   return `
    # ${title}
@@ -42,11 +43,11 @@ ${contributing}
 ${tests}
 
 ## Questions
-If you have any questions, you can reach me at ${email}. You can also check out my GitHub profile at [https://github.com/${githubUsername}](https://github.com/${githubUsername}).`;
+If you have any questions, you can reach me at ${email}. You can also check out my GitHub profile at [${githubUsername}](https://github.com/${githubUsername}).`;
 }
 
 function writeR(content) {
-  fs.writeFile("Readme.md", content, (err) => {
+  fs.writeFile("Readme1.md", content, (err) => {
     if (err) {
       console.log("Eror writing Readme.md file", err);
     } else {
@@ -94,13 +95,13 @@ const input = [
   },
   {
     type: "input",
-    name: "githubUsername",
-    message: "Enter github username",
+    name: "email",
+    message: "Enter your email address:",
   },
   {
     type: "input",
-    name: "email",
-    message: "Enter your email address:",
+    name: "githubUsername",
+    message: "Enter github username",
   },
 ];
 
@@ -114,8 +115,8 @@ function generateContent() {
       answers.license,
       answers.contributing,
       answers.tests,
-      answers.githubUsername,
-      answers.email
+      answers.email,
+      answers.githubUsername
     );
 
     writeR(readmeContent);
