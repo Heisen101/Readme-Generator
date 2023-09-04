@@ -58,47 +58,67 @@ function writeR(content) {
 const input = [
   {
     type: "input",
-    name: "",
-    message: "",
+    name: "title",
+    message: "What is the title of your project?",
   },
   {
     type: "input",
-    name: "",
-    message: "",
+    name: "description",
+    message: "Could you write the discription of your app?",
   },
   {
     type: "input",
-    name: "",
-    message: "",
+    name: "instalation",
+    message: "Write your instalatio instruction, please:",
   },
   {
     type: "input",
-    name: "",
-    message: "",
+    name: "usage",
+    message: "What are the usage instructions:",
+  },
+  {
+    type: "list",
+    name: "licence",
+    message: "Choose a license for your project:",
+    choices: ["MIT", "Apache-2.0", "GPL-3.0", "Other"],
   },
   {
     type: "input",
-    name: "",
-    message: "",
+    name: "contributing",
+    message: "What are contribution guidelines?",
   },
   {
     type: "input",
-    name: "",
-    message: "",
+    name: "tests",
+    message: "Enter test instructions:",
   },
   {
     type: "input",
-    name: "",
-    message: "",
+    name: "githubUsername",
+    message: "Enter github username",
   },
   {
     type: "input",
-    name: "",
-    message: "",
-  },
-  {
-    type: "input",
-    name: "",
-    message: "",
+    name: "email",
+    message: "Enter your email address:",
   },
 ];
+
+function generateContent() {
+  inquirer.prompt(input).then((answers) => {
+    const readmeContent = generateReadme(
+      answers.title,
+      answers.description,
+      answers.installation,
+      answers.usage,
+      answers.license,
+      answers.contributing,
+      answers.tests,
+      answers.githubUsername,
+      answers.email
+    );
+
+    writeR(readmeContent);
+  });
+}
+generateContent();
