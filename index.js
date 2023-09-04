@@ -44,3 +44,13 @@ ${tests}
 ## Questions
 If you have any questions, you can reach me at ${email}. You can also check out my GitHub profile at [https://github.com/${githubUsername}](https://github.com/${githubUsername}).`;
 }
+
+function writeR(content) {
+  fs.writeFile("Readme.md", content, (err) => {
+    if (err) {
+      console.log("Eror writing Readme.md file", err);
+    } else {
+      console.log("Readme.md file created successfullyy");
+    }
+  });
+}
