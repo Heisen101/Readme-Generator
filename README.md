@@ -32,11 +32,17 @@ npm install
 
 node index.js
 
+![runComand](./Images/first.png)
+
 ## Usage
 
+Youtube demonstration video could be found on the [attached link](https://www.youtube.com/watch?v=z5ZLI0xI-FA).
+
 After running the README Generator, you will be prompted to answer a series of questions about your project. These questions will cover various aspects of your project, such as its title, description, installation instructions, usage information, license, contributing guidelines, testing instructions, and your contact information.
+![AnswerQuestions](./Images/Second.png)
 
 Once you've provided answers to all the questions, the README Generator will generate a README.md file with your input and save it in the project directory.
+![AnswerQuestions](./Images/Third.png)
 
 You can then customize the generated README.md further if needed and include it in your project's repository to provide clear and comprehensive documentation for your project.
 
